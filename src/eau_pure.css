@@ -1,0 +1,45 @@
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: 0.4rem;
+}
+
+.container {
+    display: flex;
+}
+
+.checkbox {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+}
+
+.map {
+    background-color: white;
+}
+
+fieldset {
+    height: 830px;
+    width: 300px;
+}
+
+
+table,
+td {
+    border: 0px solid #333;
+    text-align: center;
+    
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+th {
+    text-align: center;
+}

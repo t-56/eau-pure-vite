@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/eau.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/eau_pure.css"/>
+    <!-- leaflet css -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    
+    <title>Eau Pure</title>
+    <center>
+      <h1>Eau Pure</h1>
+    </center>
+</head>
+
+<body>
+  <div class="container">
+    <div class="checkbox">
+      <!-- Checkbox -->
+        <fieldset>
+          <legend>Sélectionner des données</legend>
+
+          <p>Stations :</p>
+
+          <div>
+            <input type="checkbox" id="hydro" name="hydro" >
+            <label for="hydro">Hydrométriques</label>
+          </div>
+          
+
+          <div>
+            <input type="checkbox" id="temperature" name="temperature">
+            <label for="temperature">Mesures température de l'eau</label>
+          </div>
+
+        </fieldset>
+      
+    </div>
+    <div class="map">
+        <!-- Map -->
+          
+            <div id="mapid" style="width: 980px; height: 845px; border-radius: 30px;"></div>
+          
+            <!-- leaflet js-->
+            <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+                       
+            <script type="text/javascript">
+              var map = L.map('mapid').setView([46.7970935, 1.8555747], 6);
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              }).addTo(map);
+            </script>
+          <div>
+            <script src="/src/stations_hydrometriques.js"></script>
+          </div>
+
+          <div>
+            <script src="/src/stations_temperature_eau.js"></script>
+          </div>
+      </div>
+          
+  </div>      
+</body>
+</html>
